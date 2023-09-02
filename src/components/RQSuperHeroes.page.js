@@ -7,10 +7,16 @@ const fetchSuperHeroes = () => {
 };
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, isError, error, data } = useQuery(
+  const { isLoading, isError, error, data, isFetching } = useQuery(
     "super-heroes",
-    fetchSuperHeroes
+    fetchSuperHeroes,
+    // { cacheTime: 5000 }   default value is 5 min
+    {staleTime: 30000}      // default value is 0 sec
   );
+
+  //By adding explicit staleTime, we will able to reduce network request
+  
+  console.log("status", { isLoading, isFetching });
 
   if (isLoading) return <h2>Loading...</h2>;
   if (isError) return <h2>{error?.message}</h2>;
