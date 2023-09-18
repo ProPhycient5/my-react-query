@@ -24,5 +24,29 @@
       "phone": "1-463-123-4447",
       "website": "ramiro.info"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Ervin Howell",
+      "avatar": "HeMan"
+    },
+    {
+      "id": 2,
+      "name": "Rocking Yash",
+      "avatar": "Badass"
+    },
+    {
+      "id": 3,
+      "name": "Vishal",
+      "avatar": "SuperHuman"
+    }
+  ],
+  "users": [{ "id": "sawan@gmail.com", "channelId": "codingMachine" }],
+  "channels" : [
+    {
+      "id": "codingMachine",
+      "courses": ["js", "ReactJS", "NodeJS", "NextJS"]
+    }
   ]
 }
